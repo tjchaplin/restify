@@ -1,0 +1,13 @@
+{application, restify,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  crypto
+                 ]},
+  {mod, { restify_app, []}},
+  {env, []}
+ ]}.

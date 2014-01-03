@@ -1,6 +1,9 @@
 .eunit
-deps
+deps/*
 *.o
 *.beam
 *.plt
-erl_crash.dump
+*.dump
+rel/restify
+rel/vars/dev*_vars.config
+ebin/
