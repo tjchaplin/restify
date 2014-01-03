@@ -1,7 +1,9 @@
 restify
 =======
 
-An Erlang Application To Create REST Interfaces 
+>An Erlang Application To Create REST Interfaces 
+
+[![Build Status](https://travis-ci.org/tjchaplin/restify.png?branch=master)](https://travis-ci.org/tjchaplin/restify)
 
 # Get Going
 
