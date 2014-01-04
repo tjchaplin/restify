@@ -5,9 +5,7 @@
 setup([{ip,IP},{port,Port}]) ->
 	inets:start(),
 	application:start(crypto),
-	restify_config:start_link(),
-	restify_config:get("/test",fun(Req) -> testHandler(Req) end),
-	Routes = restify_config:routes(),
+	Routes = [{'GET',"/test",fun(Req) -> testHandler(Req) end}],
 	restify_server:start([{ip,IP},{port,Port}],Routes).
 
 teardown(_) ->
@@ -26,9 +24,9 @@ given_a_connection_test_() ->
 		fun(_Url) ->
 			{inparallel,
 			[
-			 % when_doesnt_have_trailing_slash_then_response_body_will_be_returned(),
-			 % when_doesnt_have_trailing_slash_then_response_status_code_will_be_200(),
-			 % when_has_trailing_slash_then_response_body_will_be_returned(),
+			 when_doesnt_have_trailing_slash_then_response_body_will_be_returned(),
+			 when_doesnt_have_trailing_slash_then_response_status_code_will_be_200(),
+			 when_has_trailing_slash_then_response_body_will_be_returned(),
 			 when_has_trailing_slash_then_response_response_status_code_will_be_200()
 			 ]}
 		end}.
