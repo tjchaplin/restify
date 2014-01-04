@@ -52,9 +52,9 @@ The library uses [mochiweb](https://github.com/mochi/mochiweb) as its lightweigh
 
 # Usages
 
-To use this library in an OTP application it needs to be added to the supervision tree.  The best way to to this is as follows
+To use this library in an OTP application it needs to be added to the supervision tree.  The best way to do this is as follows
 
-1. Add As Rebar Dependency
+* Add As Rebar Dependency
 
 In your **rebar.config** file:
 
@@ -65,7 +65,7 @@ In your **rebar.config** file:
 ]}.
 ```
 
-2. Create a module that will setup the rest server
+* Create a module that will setup the rest server
 
 rest_server.erl
 ```erlang
@@ -88,7 +88,7 @@ start_link() ->
 	restify_server:start(Options,Routes).
 ```
 
-3. Add the *rest_server* as a worker to the appliction supervisor
+* Add the *rest_server* as a worker to the appliction supervisor
 
 myapp_sup.erl
 
@@ -109,7 +109,7 @@ init([]) ->
     {ok, { {one_for_one, 5, 10}, Children} }.
 ```
 
-4. Now when your OTP application is started the rest_server(restify) will be monitored
+* Now when your OTP application is started the rest_server(restify) will be monitored
 
 # Dependencies
 
