@@ -4,7 +4,6 @@
 
 setup([{ip,IP},{port,Port}]) ->
 	inets:start(),
-	application:start(crypto),
 	Routes = [{'GET',"/test",fun(Req) -> testHandler(Req) end}],
 	restify_server:start([{ip,IP},{port,Port}],Routes).
 

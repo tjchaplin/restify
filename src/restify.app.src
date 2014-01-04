@@ -1,13 +1,13 @@
 {application, restify,
  [
-  {description, ""},
-  {vsn, "1"},
+  {description, "restify - An Erlang Library For REST Interfaces"},
+  {vsn, "0.0.1"},
+  {env, []},
+  {modules, []},
   {registered, []},
   {applications, [
                   kernel,
                   stdlib,
                   crypto
-                 ]},
-  {mod, { restify_app, []}},
-  {env, []}
+                 ]}
  ]}.
