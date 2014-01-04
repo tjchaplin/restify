@@ -48,7 +48,6 @@ $ rebar get-deps compile
 ```
 $ make
 ```
-The library uses [mochiweb](https://github.com/mochi/mochiweb) as its lightweight webserver.
 
 # Usages
 
