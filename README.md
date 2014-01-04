@@ -106,7 +106,7 @@ init([]) ->
     				{rest_server, start_link, []},
     				permanent, 5000, worker, dynamic},
 	SupervisorChildren =[RestServer],
-    {ok, { {one_for_one, 5, 10}, Children} }.
+    {ok, { {one_for_one, 5, 10}, SupervisorChildren} }.
 ```
 
 * Now when your OTP application is started the rest_server(restify) will be monitored
