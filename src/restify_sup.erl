@@ -23,6 +23,6 @@ start_link() ->
 %% ===================================================================
 
 init([]) ->
-	Server = ?CHILD(restify_server,worker),
+	Server = ?CHILD(restify_config,worker),
 	Children = [Server],
     {ok, { {one_for_one, 5, 10}, Children} }.
